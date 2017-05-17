@@ -14,8 +14,8 @@
 
       public function insertdata(){
         $data = array(
-          'roll_no' => '1',
-          'name' => 'test1'
+          'roll_no' => '3',
+          'name' => 'test3'
         );
         $this->db->insert('stud', $data);
       }
@@ -40,6 +40,17 @@
         ->update('stud', $data);
         //$this->db->where('roll_no', '1');
         //$this->db->update('stud', $data);
+      }
+
+      public function deletedata(){
+        echo $this->db->delete('stud', 'roll_no = 1');
+      }
+
+      public function getdata(){
+        $data = $this->db->get('stud');
+        foreach($data->result() as $row ){
+          echo $row->name;
+        }
       }
    } 
 ?>
