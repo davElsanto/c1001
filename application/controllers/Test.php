@@ -29,5 +29,15 @@
         echo $this->db->insert('stud', $data);
         echo $this->db->close();
       }
+
+      public function updatedata(){
+        $data = array(
+          'roll_no' => 1,
+          'name' => 'Updated value'
+        );
+        $this->db->set($data);
+        $this->db->where('roll_no', '1');
+        $this->db->update('stud', $data);
+      }
    } 
 ?>
