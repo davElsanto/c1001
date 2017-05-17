@@ -12,6 +12,7 @@
         $this->load->view('viewtest');
       }
 
+      //los métodos de aca en adelante deben moverse a directorio models pues se debe respetar el modelo MVC
       public function insertdata(){
         $data = array(
           'roll_no' => '3',
