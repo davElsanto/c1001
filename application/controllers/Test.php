@@ -33,11 +33,13 @@
       public function updatedata(){
         $data = array(
           'roll_no' => 1,
-          'name' => 'Updated value'
+          'name' => 'Updated value3'
         );
-        $this->db->set($data);
-        $this->db->where('roll_no', '1');
-        $this->db->update('stud', $data);
+        $this->db->set($data)
+        ->where('roll_no', '1')
+        ->update('stud', $data);
+        //$this->db->where('roll_no', '1');
+        //$this->db->update('stud', $data);
       }
    } 
 ?>
